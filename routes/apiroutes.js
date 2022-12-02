@@ -12,8 +12,11 @@ const uuid = () => {
 
 router.get('/notes', (req,res) => {
     console.log("get notes")
-    
-    res.json(db)
+    var newDb = fs.readFileSync("./db/db.json", "utf8")
+    let note = JSON.parse(newDb)
+    // readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+
+    res.json(note)
 })
 
 router.post('/notes', (req,res) => {
@@ -29,11 +32,14 @@ router.post('/notes', (req,res) => {
     res.json(db)
     
 })
-router.delete('/notes/:note_id', (req,res) => {
+router.delete('/notes/:id', (req,res) => {
     console.log("delete notes")
-    newDB = db.filter(note => note.id !== req.params.note_id)
-    fs.writeFile("./db/db.json",  JSON.stringify(newDB), err => console.log (err))
-    res.json(db)
+   
+    var newDb = fs.readFileSync("./db/db.json", "utf8")
+    let note = JSON.parse(newDb)
+    newDb2 = note.filter(note => note.id !== req.params.id)
+    fs.writeFile("./db/db.json",  JSON.stringify(newDb2), err => console.log (err))
+    res.json(newDb2)
     
 })
 

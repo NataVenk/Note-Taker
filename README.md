@@ -1,20 +1,33 @@
 # Note Taker Starter Code
 
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+## Goal
+
+Create a program that will help to add and delete notes
+
+## Acceptance Criteria
+
+When i start the page i have option to click on add notes. once I click on it, i have a page with saved notes on the left and a field to add new note on the rigth. Once I enter the note, i have option to save it using icon "save". once the note is saved - it will appear on left side. 
+if i need to retrive saved notes - i click on appropriate note on teh left and it will show the content on the rigth field. 
+
+
+
+## Mock-up
+
+   https://cryptic-ocean-13240.herokuapp.com/
+
+   <img src = "./public/assets/website.png" />
+
+
+## Credits
+
+class instructor
+Sean New
+Ask BCS Learning assistant
+
+## License
+
+MIT license
+
+
 
