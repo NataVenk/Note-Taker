@@ -31,7 +31,7 @@ router.post('/notes', (req,res) => {
 })
 router.delete('/notes/:note_id', (req,res) => {
     console.log("delete notes")
-    newDB = db.filter(note => note.id  !== req.params.note_id)
+    newDB = db.filter(note => note.id !== req.params.note_id)
     fs.writeFile("./db/db.json",  JSON.stringify(newDB), err => console.log (err))
     res.json(db)
     
